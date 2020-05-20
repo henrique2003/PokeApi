@@ -42,7 +42,7 @@ const App = () => {
             <h3>Pokemons</h3>
           </div>
           <div className="row">
-            <PokemonItem />
+            <PokemonItem name="Bubasauro" />
             <PokemonItem />
             <PokemonItem />
           </div>
