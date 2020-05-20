@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+body {
+  background: #eee;
+  font-family: "Poppins", sans-serif;
+}
+
+.border {
+  border: 1px solid black !important;
+}
+
+.wrapper_app .wrapper_title {
+  text-align: center;
+  margin: 50px 0;
+}
+
+.wrapper_app .wrapper_title h1 {
+  font-size: 55px;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.wrapper_pokemons {
+  padding: 30px 30px;
+  background: white;
+  box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+}
+
+.wrapper_pokemons .wrapper_subtitle {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  margin-bottom: 20px;
+}
+
+.wrapper_pokemons .wrapper_subtitle h3 {
+  color: rgba(0, 0, 0, 0.6);
+  margin-left: 5px;
+}
