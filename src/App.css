@@ -24,6 +24,7 @@ body {
   background: white;
   box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.1);
   border-radius: 2px;
+  margin-bottom: 30px;
 }
 
 .wrapper_pokemons .wrapper_subtitle {
@@ -34,4 +35,31 @@ body {
 .wrapper_pokemons .wrapper_subtitle h3 {
   color: rgba(0, 0, 0, 0.6);
   margin-left: 5px;
+}
+
+.wrapper_pokemons .wrapper_button {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.wrapper_pokemons .wrapper_button button {
+  border: 1px solid rgba(0, 0, 0, 0);
+  color: white;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 3px;
+  width: 100%;
+  padding: 8px;
+  font-size: 18px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.wrapper_pokemons .wrapper_button button:hover {
+  border: 1px solid rgba(0, 0, 0, 0.6) !important;
+  color: rgba(0, 0, 0, 0.6) !important;
+  background: white !important;
+  border: 1px solid rgba(0, 0, 0, 0);
+  color: white;
+  background: rgba(0, 0, 0, 0.6);
+  transition: all 0.3s ease;
 }
