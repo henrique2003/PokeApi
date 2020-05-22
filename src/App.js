@@ -11,7 +11,7 @@ const App = () => {
 
     async function getPokemon() {
       try {
-        const res = await axios.get('https://pokeapi.co/api/v2/pokemon/?offset=20&limit=20')
+        const res = await axios.get('https://pokeapi.co/api/v2/pokemon/?offset=0&limit=20')
 
         setPokemons(res.data.results)
       } catch (error) {
@@ -31,9 +31,7 @@ const App = () => {
             <h3>Pokemons</h3>
           </div>
           <div className="row">
-            {pokemons.map((pokemon, index) => (
-              <PokemonItem key={index} name={pokemon.name} url={pokemon.url} />
-            ))}
+            {pokemons.map((pokemon, index) => <PokemonItem key={index} pokemon={pokemon} />)}
           </div>
           <div className="wrapper_button">
             <button type="button">Ver mais</button>
