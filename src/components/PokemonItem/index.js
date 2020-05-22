@@ -1,7 +1,9 @@
 import React from 'react'
 import './style.css'
 
-const PokemonItem = ({ pokemon }) => {
+const PokemonItem = (props) => {
+  // Pegar o objeto pokemon de dentro do props
+  const { pokemon } = props
   const { name, url } = pokemon
 
   return (
