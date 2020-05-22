@@ -10,7 +10,7 @@ const App = () => {
   useEffect(() => {
     async function getPokemons() {
       try {
-        const res = await axios.get(`https://pokeapi.co/api/v2/pokemon/?offset=0&limit=20`)
+        const res = await axios.get(`https://pokeapi.co/api/v2/pokemon/?offset=0&limit=${limit}`)
 
         return setPokemons(res.data.results)
       } catch (error) {
@@ -18,21 +18,7 @@ const App = () => {
       }
     }
     getPokemons()
-  }, [])
-
-  async function morePokemons() {
-    try {
-      const moreLimit = limit + 20
-
-      setLimit(moreLimit)
-
-      const res = await axios.get(`https://pokeapi.co/api/v2/pokemon/?offset=0&limit=${moreLimit}`)
-
-      return setPokemons(res.data.results)
-    } catch (error) {
-      console.log(error)
-    }
-  }
+  }, [limit])
 
   return (
     <div className="wrapper_app">
@@ -48,7 +34,7 @@ const App = () => {
             {pokemons.map((pokemon, index) => <PokemonItem key={index} pokemon={pokemon} />)}
           </div>
           <div className="wrapper_button">
-            <button type="button" onClick={morePokemons}>Ver mais</button>
+            <button type="button" onClick={() => setLimit(limit + 20)}>Ver mais</button>
           </div>
         </div>
       </div>
