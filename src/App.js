@@ -7,6 +7,7 @@ const App = () => {
   const [pokemons, setPokemons] = useState([])
   const [limit, setLimit] = useState(20)
   const [loading, setLoading] = useState(false)
+  const [filter, setFilter] = useState('')
 
   useEffect(() => {
     async function getPokemons() {
@@ -32,6 +33,15 @@ const App = () => {
         <div className="wrapper_pokemons">
           <div className="wrapper_subtitle">
             <h3>Pokemons</h3>
+          </div>
+          <div className="wrapper_filter">
+            <input
+              type="text"
+              value={filter}
+              name="input"
+              placeholder="Procure um pokemon pelo seu nome"
+              onChange={(e) => setFilter(e.target.value)}
+            />
           </div>
           <div className="row">
             {
