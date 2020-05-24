@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { memo } from 'react'
 import './style.css'
 
 const PokemonItem = ({ pokemon }) => {
-  const { name, url } = pokemon
+  const { url, name } = pokemon
 
   return (
     <div className="wrapper_pokemon_item col-12 col-sm-12 col-md-6 col-lg-6">
@@ -25,4 +25,4 @@ PokemonItem.defaultProps = {
   url: '/'
 }
 
-export default PokemonItem;
+export default memo(PokemonItem);
