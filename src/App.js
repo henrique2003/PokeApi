@@ -6,13 +6,16 @@ import './App.css'
 const App = () => {
   const [pokemons, setPokemons] = useState([])
   const [limit, setLimit] = useState(20)
+  const [loading, setLoading] = useState(false)
 
   useEffect(() => {
     async function getPokemons() {
       try {
+        setLoading(true)
         const res = await axios.get(`https://pokeapi.co/api/v2/pokemon/?offset=0&limit=${limit}`)
 
-        return setPokemons(res.data.results)
+        setPokemons(res.data.results)
+        return setLoading(false)
       } catch (error) {
         console.log(error)
       }
@@ -34,11 +37,15 @@ const App = () => {
             {
               pokemons.length !== 0 ?
                 pokemons.map((pokemon, index) => <PokemonItem key={index} pokemon={pokemon} />) :
-                <p className="api_error">Ouve um error inesperado, porfavor tente acessar este sire novamente mais tarde.</p>
+                <p className="api_error">
+                  Ouve um error inesperado, porfavor tente acessar este sire novamente mais tarde.
+                </p>
             }
           </div>
           <div className="wrapper_button">
-            <button type="button" onClick={() => setLimit(limit + 20)}>Ver mais</button>
+            <button type="button" onClick={() => setLimit(limit + 20)} disabled={loading ? true : false}>
+              {loading ? 'Carregando...' : 'Ver mais'}
+            </button>
           </div>
         </div>
       </div>
