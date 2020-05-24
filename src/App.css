@@ -63,3 +63,11 @@ body {
   background: rgba(0, 0, 0, 0.6);
   transition: all 0.3s ease;
 }
+
+.api_error {
+  text-align: center;
+  width: 100%;
+  font-size: 18px;
+  margin-top: 30px;
+  color: #ca0303;
+}

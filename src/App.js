@@ -32,9 +32,9 @@ const App = () => {
           </div>
           <div className="row">
             {
-              pokemons ?
+              pokemons.length !== 0 ?
                 pokemons.map((pokemon, index) => <PokemonItem key={index} pokemon={pokemon} />) :
-                <p className="api_error">Ouve um error inesperado, porfavor tente acessar o site mais tarde.</p>
+                <p className="api_error">Ouve um error inesperado, porfavor tente acessar este sire novamente mais tarde.</p>
             }
           </div>
           <div className="wrapper_button">
