@@ -11,7 +11,7 @@ const PokemonItem = (props) => {
       <div className="wrapper_card">
         <div className="row">
           <div className="col-6">
-            <p>Nome: {name}</p>
+            <p>Nome: <span>{name}</span></p>
           </div>
           <div className="col-6 text-right">
             <a href={url}>Ver mais</a>
