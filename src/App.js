@@ -39,7 +39,7 @@ const App = () => {
               type="text"
               value={filter}
               name="input"
-              placeholder="Procure um pokemon pelo seu nome"
+              placeholder="Procurar pokemon"
               onChange={(e) => setFilter(e.target.value)}
             />
           </div>
