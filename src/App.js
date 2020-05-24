@@ -31,7 +31,11 @@ const App = () => {
             <h3>Pokemons</h3>
           </div>
           <div className="row">
-            {pokemons.map((pokemon, index) => <PokemonItem key={index} pokemon={pokemon} />)}
+            {
+              pokemons ?
+                pokemons.map((pokemon, index) => <PokemonItem key={index} pokemon={pokemon} />) :
+                <p className="api_error">Ouve um error inesperado, porfavor tente acessar o site mais tarde.</p>
+            }
           </div>
           <div className="wrapper_button">
             <button type="button" onClick={() => setLimit(limit + 20)}>Ver mais</button>
