@@ -27,15 +27,31 @@ body {
 }
 
 .wrapper_pokemons .wrapper_subtitle {
-  margin: 40px 0 50px 0;
+  margin-top: 40px;
+  margin-bottom: 15px;
   text-align: center;
 }
 
 .wrapper_pokemons .wrapper_subtitle h3 {
   color: rgb(218, 87, 87);
-  width: 350px;
+  max-width: 350px;
   margin: 0 auto;
   border-bottom: 1px solid #dba605;
+  padding-bottom: 5px;
+}
+
+.wrapper_pokemons .wrapper_filter {
+  max-width: 350px;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
+.wrapper_pokemons .wrapper_filter input {
+  width: 100%;
+  border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  padding: 3px 5px;
 }
 
 .wrapper_pokemons .wrapper_button {
