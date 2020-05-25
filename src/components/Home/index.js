@@ -7,6 +7,7 @@ import './style.css'
 
 const Home = () => {
   const [pokemons, setPokemons] = useState([])
+  const [count, setCount] = useState(0)
   const [pokeFiltereds, setPokeFiltereds] = useState([])
   const [limit, setLimit] = useState(20)
   const [loading, setLoading] = useState(false)
@@ -18,6 +19,7 @@ const Home = () => {
         setLoading(true)
         const res = await axios.get(`https://pokeapi.co/api/v2/pokemon/?offset=0&limit=${limit}`)
 
+        setCount(res.data.count)
         setPokemons(res.data.results)
         setPokeFiltereds(res.data.results)
         return setLoading(false)
@@ -72,7 +74,11 @@ const Home = () => {
           </div>
           <div className="wrapper_button">
             <button type="button" onClick={() => setLimit(limit + 20)} disabled={loading ? true : false}>
-              {loading ? 'Carregando...' : 'Ver mais'}
+              {loading ? 'Carregando...' : (
+                <>
+                  <span>Ver mais</span><span>| {limit} de {count}</span>
+                </>
+              )}
             </button>
           </div>
         </div>
