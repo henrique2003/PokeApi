@@ -7,9 +7,9 @@ import './style.css'
 
 const Home = () => {
   const [pokemons, setPokemons] = useState([])
+  const [pokeFiltereds, setPokeFiltereds] = useState([])
   const [filter, setFilter] = useState([])
   const [count, setCount] = useState(0)
-  const [pokeFiltereds, setPokeFiltereds] = useState([])
   const [limit, setLimit] = useState(20)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(false)
@@ -48,8 +48,22 @@ const Home = () => {
   }
 
   function modifyFilter(name) {
-    if (name) return setFilter(name)
-    return setPokeFiltereds(pokemons)
+    if (name.length !== 0) {
+      return setFilter(name)
+    }
+
+    setNotFound(false)
+    setPokeFiltereds(pokemons)
+  }
+
+  function showPokemonItem() {
+    if (error) {
+      return <p className="error">Ouve um error inesperado, porfavor tente acessar este sire novamente mais tarde.</p>
+    } else if (notFound) {
+      return <p className="not_found">Nenhum pokemom encontrado</p>
+    } else {
+      return pokeFiltereds.map((pokemon, index) => <PokemonItem key={index} pokemon={pokemon} />)
+    }
   }
 
   return (
@@ -74,20 +88,14 @@ const Home = () => {
             </form>
           </div>
           <div className="row">
-            {
-              error ? <p className="error">
-                Ouve um error inesperado, porfavor tente acessar este sire novamente mais tarde.
-              </p> : notFound ?
-                  <p className="not_found">Nenhum pokemom encontrado</p> :
-                  pokeFiltereds.map((pokemon, index) => <PokemonItem key={index} pokemon={pokemon} />)
-
-            }
+            {showPokemonItem()}
           </div>
           <div className="wrapper_button">
             <button type="button" onClick={() => setLimit(limit + 20)} disabled={loading ? true : false}>
               {loading ? 'Carregando...' : (
                 <>
-                  <span>Ver mais</span><span>| {limit} de {count}</span>
+                  <span>Ver mais</span>
+                  <span>| {limit} de {count}</span>
                 </>
               )}
             </button>
