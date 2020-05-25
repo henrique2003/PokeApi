@@ -7,11 +7,13 @@ import './style.css'
 
 const Home = () => {
   const [pokemons, setPokemons] = useState([])
+  const [filter, setFilter] = useState([])
   const [count, setCount] = useState(0)
   const [pokeFiltereds, setPokeFiltereds] = useState([])
   const [limit, setLimit] = useState(20)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(false)
+  const [notFound, setNotFound] = useState(false)
 
   useEffect(() => {
     async function getPokemons() {
@@ -32,15 +34,22 @@ const Home = () => {
   }, [limit])
 
 
-  function filterPokemons(e) {
-    const inputFilter = e.target.value
+  async function filterPokemons(e) {
+    try {
+      e.preventDefault()
 
-    const filterPokemons = pokemons.filter((pokemon) => {
-      const { name } = pokemon
-      return name.toLowerCase().includes(inputFilter.toLowerCase())
-    })
+      const res = await axios.get(`https://pokeapi.co/api/v2/pokemon/${filter}`)
 
-    setPokeFiltereds(filterPokemons)
+      setPokeFiltereds(res.data.forms)
+      setNotFound(false)
+    } catch (error) {
+      setNotFound(true)
+    }
+  }
+
+  function modifyFilter(name) {
+    if (name) return setFilter(name)
+    return setPokeFiltereds(pokemons)
   }
 
   return (
@@ -54,22 +63,24 @@ const Home = () => {
             <h3>Pokemons</h3>
           </div>
           <div className="wrapper_filter">
-            <input
-              type="text"
-              name="input"
-              placeholder="Procurar pokemon"
-              onChange={(e) => filterPokemons(e)}
-            />
-            <FaSearchengin />
+            <form onSubmit={filterPokemons}>
+              <input
+                type="text"
+                name="input"
+                placeholder="Procurar pokemon"
+                onChange={(e) => modifyFilter(e.target.value)}
+              />
+              <FaSearchengin />
+            </form>
           </div>
           <div className="row">
             {
               error ? <p className="error">
                 Ouve um error inesperado, porfavor tente acessar este sire novamente mais tarde.
-              </p> :
-                pokeFiltereds.length !== 0 ?
-                  pokeFiltereds.map((pokemon, index) => <PokemonItem key={index} pokemon={pokemon} />) :
-                  <p className="not_found">Nenhum pokemom encontrado</p>
+              </p> : notFound ?
+                  <p className="not_found">Nenhum pokemom encontrado</p> :
+                  pokeFiltereds.map((pokemon, index) => <PokemonItem key={index} pokemon={pokemon} />)
+
             }
           </div>
           <div className="wrapper_button">
