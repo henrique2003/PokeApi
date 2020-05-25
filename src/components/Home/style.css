@@ -79,6 +79,11 @@ body {
   transition: all 0.3s ease;
 }
 
+.wrapper_pokemons .wrapper_button span:last-child {
+  font-size: 16px;
+  margin-left: 5px;
+}
+
 .wrapper_pokemons .wrapper_button button:hover {
   color: white !important;
   background: rgb(218, 87, 87) !important;
