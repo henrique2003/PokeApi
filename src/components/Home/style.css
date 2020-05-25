@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+body {
+  background: rgb(218, 87, 87);
+  font-family: "Poppins", sans-serif;
+}
+
+.border {
+  border: 1px solid black !important;
+}
+
+.wrapper_app .wrapper_title {
+  text-align: center;
+  margin: 50px 0;
+}
+
+.wrapper_app .wrapper_title h1 {
+  font-size: 55px;
+  color: #ffc107;
+}
+
+.wrapper_pokemons {
+  padding: 30px 30px;
+  background: white;
+  border-radius: 2px;
+  margin-bottom: 30px;
+}
+
+.wrapper_pokemons .wrapper_subtitle {
+  margin-top: 40px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.wrapper_pokemons .wrapper_subtitle h3 {
+  color: rgb(218, 87, 87);
+  max-width: 350px;
+  margin: 0 auto;
+  border-bottom: 1px solid #dba605;
+  padding-bottom: 5px;
+}
+
+.wrapper_pokemons .wrapper_filter {
+  max-width: 350px;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
+.wrapper_pokemons .wrapper_filter input {
+  width: 100%;
+  border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  padding: 3px 5px;
+}
+
+.wrapper_pokemons .wrapper_filter svg {
+  margin-top: -55px;
+  margin-left: 310px;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 23px;
+}
+
+.wrapper_pokemons .wrapper_button {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.wrapper_pokemons .wrapper_button button {
+  border: 1px solid rgb(218, 87, 87);
+  color: rgb(218, 87, 87);
+  background: white;
+  border-radius: 3px;
+  width: 100%;
+  padding: 8px;
+  font-size: 18px;
+  letter-spacing: 1px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.wrapper_pokemons .wrapper_button button:hover {
+  color: white !important;
+  background: rgb(218, 87, 87) !important;
+  color: white;
+  background: rgb(218, 87, 87);
+  transition: all 0.3s ease;
+}
+
+.error {
+  text-align: center;
+  width: 100%;
+  font-size: 18px;
+  margin-top: 30px;
+  color: #ca0303;
+}
+
+.not_found {
+  text-align: center;
+  width: 100%;
+  font-size: 18px;
+  margin-top: 30px;
+  color: #808080;
+}
