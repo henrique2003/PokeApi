@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import PokemonItem from './components/PokemonItem'
+import { FaSearchengin } from 'react-icons/fa'
 
 import './App.css'
 
@@ -43,6 +44,7 @@ const App = () => {
               placeholder="Procurar pokemon"
               onChange={(e) => setFilter(e.target.value)}
             />
+            <FaSearchengin />
           </div>
           <div className="row">
             {

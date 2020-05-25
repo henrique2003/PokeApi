@@ -54,6 +54,13 @@ body {
   padding: 3px 5px;
 }
 
+.wrapper_pokemons .wrapper_filter svg {
+  margin-top: -55px;
+  margin-left: 310px;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 23px;
+}
+
 .wrapper_pokemons .wrapper_button {
   margin-top: 50px;
   text-align: center;
