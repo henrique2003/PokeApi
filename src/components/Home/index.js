@@ -14,6 +14,7 @@ const Home = () => {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(false)
   const [notFound, setNotFound] = useState(false)
+  const [loadingRequest, setLoadingRequest] = useState(false)
 
   useEffect(() => {
     async function getPokemons() {
@@ -37,12 +38,19 @@ const Home = () => {
   async function filterPokemons(e) {
     try {
       e.preventDefault()
+      setNotFound(false)
 
+      console.log("ddfef")
+      setLoadingRequest(true)
       const res = await axios.get(`https://pokeapi.co/api/v2/pokemon/${filter}`)
 
-      setPokeFiltereds(res.data.forms)
+      console.log("aaaaf")
+      setLoadingRequest(false)
       setNotFound(false)
+      setPokeFiltereds(res.data.forms)
     } catch (error) {
+      console.log('ss')
+      setLoadingRequest(false)
       setNotFound(true)
     }
   }
@@ -61,6 +69,8 @@ const Home = () => {
       return <p className="error">Ouve um error inesperado, porfavor tente acessar este sire novamente mais tarde.</p>
     } else if (notFound) {
       return <p className="not_found">Nenhum pokemom encontrado</p>
+    } else if (loadingRequest) {
+      return <p className="not_found">Procurando...</p>
     } else {
       return pokeFiltereds.map((pokemon, index) => <PokemonItem key={index} pokemon={pokemon} />)
     }
