@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Link, withRouter } from 'react-router-dom'
-import { FaArrowLeft } from 'react-icons/fa'
+import { FaArrowLeft, FaArrowRight } from 'react-icons/fa'
 import axios from 'axios'
 
 import './style.css'
@@ -56,9 +56,11 @@ const AboutPokemon = ({ history, match }) => {
 
   return (
     <div className="wrapper_about_pokemon">
-      <Link to='/'>
-        <FaArrowLeft />
-      </Link>
+      <div className="wrapper_back_arrow">
+        <Link to='/'>
+          <FaArrowLeft />
+        </Link>
+      </div>
       <div className="container">
         <div className="wrapper_title">
           <h1>Poke Api</h1>
@@ -97,6 +99,14 @@ const AboutPokemon = ({ history, match }) => {
               </div>
             </div>
           </div>
+        </div>
+        <div className="wrapper_arrows">
+          <Link to="/">
+            <FaArrowLeft />
+          </Link>
+          <Link to="/">
+            <FaArrowRight />
+          </Link>
         </div>
       </div>
     </div>

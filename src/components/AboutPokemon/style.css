@@ -1,4 +1,4 @@
-.wrapper_about_pokemon a svg {
+.wrapper_about_pokemon .wrapper_back_arrow a svg {
   position: absolute;
   top: 25px;
   left: 30px;
@@ -38,6 +38,25 @@
   color: rgb(218, 87, 87);
 }
 
-.wrapper_pokemons span {
+.wrapper_about_pokemon .wrapper_pokemons span {
   color: #dba605;
+}
+
+.wrapper_about_pokemon .wrapper_arrows {
+  margin: 0 8px;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.wrapper_about_pokemon .wrapper_arrows a svg {
+  font-size: 27px;
+  color: rgba(255, 255, 255, 0.7);
+  transition: all 0.2s ease;
+}
+
+.wrapper_about_pokemon .wrapper_arrows a svg:hover {
+  color: rgba(255, 255, 255, 0.9);
+  transition: all 0.2s ease;
 }
