@@ -39,3 +39,17 @@
   border: 1px solid rgb(218, 87, 87);
   transition: all 0.3s ease;
 }
+
+/* Celphone */
+@media (max-width: 468px) {
+  .wrapper_pokemon_item .wrapper_card p {
+    font-size: 17px;
+    line-height: 25px;
+    white-space: nowrap;
+  }
+
+  .wrapper_pokemon_item .wrapper_card a {
+    padding: 4px 15px;
+    font-size: 15px;
+  }
+}
