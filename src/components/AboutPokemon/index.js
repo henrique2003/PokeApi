@@ -9,7 +9,9 @@ const AboutPokemon = () => {
 
   return (
     <div className="wrapper_about_pokemon">
-      <Link to='/'><FaArrowLeft /></Link>
+      <Link to='/'>
+        <FaArrowLeft />
+      </Link>
       <div className="container">
         <div className="wrapper_title">
           <h1>Poke Api</h1>
@@ -17,7 +19,7 @@ const AboutPokemon = () => {
         <div className="wrapper_pokemons">
           <div className="row">
             <div
-              className="wrapper_sprite col-2 text-center"
+              className="wrapper_sprite col-12 col-sm-12 col-md-2 col-lg-2 text-center"
               onMouseOver={() => setChangeSprite(true)}
               onMouseOut={() => setChangeSprite(false)}
             >
@@ -29,20 +31,20 @@ const AboutPokemon = () => {
                 className="img-fluid"
               />
             </div>
-            <div className="col-2">
+            <div className="col-12 col-sm-12 col-md-3 col-lg-2 mt-4 mt-sm-4 mt-md-0">
               <div className="content">
                 <p>Nome: <span>ditto</span></p>
                 <p>Tipo: <span>normal</span></p>
                 <p>Peso: <span>40</span></p>
               </div>
             </div>
-            <div className="col-3">
+            <div className="col-12 col-sm-12 col-md-3 col-lg-3">
               <div className="content">
                 <p>Pokedéx: <span>132</span></p>
                 <p>Experiência base: <span>101xp</span></p>
               </div>
             </div>
-            <div className="wrapper_abilities col-5">
+            <div className="col-12 col-sm-12 col-md-4 col-lg-5">
               <div className="content">
                 <p>Abilidades: <span>imposte, limber</span></p>
               </div>
