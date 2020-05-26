@@ -28,7 +28,7 @@ Digite em seu terminal, em um diretório a sua escolha `git clone https://github
 2. Caso aja errors você pode-los no console apertando f12 e clicando em console.<br />
 
 ## Veja a aplicação rodando:
-![Projeto funcinando](/indecision-app_Trim.gif)
+![Projeto funcinando](/action.gif)
 
 ### Como parar a aplicação?
 
