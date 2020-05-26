@@ -1,3 +1,18 @@
+.wrapper_about_pokemon a svg {
+  position: absolute;
+  top: 25px;
+  left: 30px;
+  font-size: 35px;
+  color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.wrapper_about_pokemon a svg:hover {
+  color: rgba(255, 255, 255, 0.9);
+  transition: all 0.2s ease;
+}
+
 .wrapper_about_pokemon .wrapper_title {
   text-align: center;
   margin: 50px 0;
@@ -10,7 +25,20 @@
 
 .wrapper_about_pokemon .wrapper_pokemons {
   padding: 30px 30px;
+  padding-bottom: 20px;
   background: white;
   border-radius: 2px;
-  margin-bottom: 30px;
+}
+
+.wrapper_pokemons .wrapper_sprite img {
+  border-radius: 50%;
+  border: 1px solid rgb(218, 87, 87);
+}
+
+.wrapper_pokemons p {
+  color: rgb(218, 87, 87);
+}
+
+.wrapper_pokemons span {
+  color: #dba605;
 }
