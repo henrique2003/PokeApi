@@ -1,16 +1,12 @@
 import React, { memo } from 'react'
 import { Link } from 'react-router-dom'
 
+import formatUrl from '../../utils/format-url'
+
 import './style.css'
 
 const PokemonItem = ({ pokemon }) => {
   const { url, name } = pokemon
-
-  function formatUrl() {
-    const newUrl = url.split("/")
-
-    return newUrl[6]
-  }
 
   return (
     <div className="wrapper_pokemon_item col-12 col-sm-12 col-md-6 col-lg-6">
