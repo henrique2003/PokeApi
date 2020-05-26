@@ -14,9 +14,7 @@ Ao apertar no botão de ver mais, o usuário é redirecionado para uma página o
 
 ### Instalando o projeto:
 
-Digite em seu terminal, em um diretório a sua escolha `git clone https://github.com/henrique2003/PokeApi.git`
-
-![Instalando oProjeto](/install_Trim.gif)
+Digite em seu terminal, em um diretório a sua escolha `git clone https://github.com/henrique2003/PokeApi.git`<br/>
 
 ### Rode a app com `yarn start` ou `npm run start`
 
