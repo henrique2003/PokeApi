@@ -59,3 +59,10 @@
   color: rgba(255, 255, 255, 0.9);
   transition: all 0.2s ease;
 }
+
+/* Celphone */
+@media (max-width: 468px) {
+  .wrapper_about_pokemon .wrapper_title {
+    margin-top: 80px;
+  }
+}
