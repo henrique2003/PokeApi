@@ -6,6 +6,8 @@ import axios from 'axios'
 import './style.css'
 
 const AboutPokemon = ({ history, match }) => {
+  const id = parseInt(match.params.id)
+
   const [changeSprite, setChangeSprite] = useState(false)
   const [pokemon, setPokemon] = useState({
     sprites: {
@@ -31,7 +33,7 @@ const AboutPokemon = ({ history, match }) => {
   useEffect(() => {
     async function loadPokemon() {
       try {
-        const res = await axios.get(`https://pokeapi.co/api/v2/pokemon/${match.params.id}`)
+        const res = await axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`)
 
         return setPokemon(res.data)
       } catch (error) {
@@ -40,7 +42,7 @@ const AboutPokemon = ({ history, match }) => {
     }
 
     loadPokemon()
-  }, [history, match.params.id])
+  }, [history, id])
 
   function showTypes() {
     return pokemon.types.map(({ type }) => {
@@ -52,6 +54,22 @@ const AboutPokemon = ({ history, match }) => {
     return pokemon.abilities.map(({ ability }) => {
       return ability.name
     }).join(', ')
+  }
+
+  function backArrow() {
+    if (id - 1 <= 0) {
+      return 1
+    }
+
+    return id - 1
+  }
+
+  function leftArrow() {
+    if (id + 1 >= 808) {
+      return 807
+    }
+
+    return id + 1
   }
 
   return (
@@ -101,10 +119,10 @@ const AboutPokemon = ({ history, match }) => {
           </div>
         </div>
         <div className="wrapper_arrows">
-          <Link to="/">
+          <Link to={`/sobre/${backArrow()}`}>
             <FaArrowLeft />
           </Link>
-          <Link to="/">
+          <Link to={`/sobre/${leftArrow()}`}>
             <FaArrowRight />
           </Link>
         </div>

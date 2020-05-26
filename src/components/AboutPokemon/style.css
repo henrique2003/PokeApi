@@ -43,15 +43,14 @@
 }
 
 .wrapper_about_pokemon .wrapper_arrows {
-  margin: 0 8px;
   margin-top: 40px;
   margin-bottom: 30px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .wrapper_about_pokemon .wrapper_arrows a svg {
-  font-size: 27px;
+  font-size: 30px;
   color: rgba(255, 255, 255, 0.7);
   transition: all 0.2s ease;
 }
