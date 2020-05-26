@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import PokemonItem from '../PokemonItem'
+import PokemonItem from './PokemonItem'
 import { FaSearchengin } from 'react-icons/fa'
 
 import './style.css'
@@ -77,7 +77,7 @@ const Home = () => {
   }
 
   return (
-    <div className="wrapper_app">
+    <div className="wrapper_home">
       <div className="container">
         <div className="wrapper_title">
           <h1>Poke Api</h1>

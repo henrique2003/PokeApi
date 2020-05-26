@@ -1,0 +1,16 @@
+.wrapper_home .wrapper_title {
+  text-align: center;
+  margin: 50px 0;
+}
+
+.wrapper_home .wrapper_title h1 {
+  font-size: 55px;
+  color: #ffc107;
+}
+
+.wrapper_pokemons {
+  padding: 30px 30px;
+  background: white;
+  border-radius: 2px;
+  margin-bottom: 30px;
+}

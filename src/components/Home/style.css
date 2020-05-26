@@ -9,12 +9,12 @@ body {
   border: 1px solid black !important;
 }
 
-.wrapper_app .wrapper_title {
+.wrapper_home .wrapper_title {
   text-align: center;
   margin: 50px 0;
 }
 
-.wrapper_app .wrapper_title h1 {
+.wrapper_home .wrapper_title h1 {
   font-size: 55px;
   color: #ffc107;
 }
