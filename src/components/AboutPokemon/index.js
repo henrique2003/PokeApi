@@ -113,7 +113,7 @@ const AboutPokemon = ({ history, match }) => {
             </div>
             <div className="col-12 col-sm-12 col-md-3 col-lg-4">
               <div className="content">
-                <p>Abilidades: <span>{showAbilitys()}</span></p>
+                <p>Habilidades: <span>{showAbilitys()}</span></p>
               </div>
             </div>
           </div>
