@@ -66,7 +66,7 @@ const Home = () => {
 
   function showPokemonItem() {
     if (error) {
-      return <p className="error">Ouve um error inesperado, porfavor tente acessar este sire novamente mais tarde.</p>
+      return <p className="error">Houve um error inesperado, por favor tente acessar este sire novamente mais tarde.</p>
     } else if (notFound) {
       return <p className="not_found">Nenhum pokemom encontrado</p>
     } else if (loadingRequest) {
