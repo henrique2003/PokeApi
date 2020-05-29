@@ -40,16 +40,13 @@ const Home = () => {
       e.preventDefault()
       setNotFound(false)
 
-      console.log("ddfef")
       setLoadingRequest(true)
       const res = await axios.get(`https://pokeapi.co/api/v2/pokemon/${filter}`)
 
-      console.log("aaaaf")
       setLoadingRequest(false)
       setNotFound(false)
       setPokeFiltereds(res.data.forms)
     } catch (error) {
-      console.log('ss')
       setLoadingRequest(false)
       setNotFound(true)
     }
@@ -66,7 +63,7 @@ const Home = () => {
 
   function showPokemonItem() {
     if (error) {
-      return <p className="error">Ouve um error inesperado, porfavor tente acessar este sire novamente mais tarde.</p>
+      return <p className="error">Houve um error inesperado, por favor tente acessar este sire novamente mais tarde.</p>
     } else if (notFound) {
       return <p className="not_found">Nenhum pokemom encontrado</p>
     } else if (loadingRequest) {
