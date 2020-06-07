@@ -11,8 +11,8 @@
 3. React js<br />
 
 ### O que posso fazer nesta aplicação?
-Nesta aplicação é possível ver e procurar todos os pokemons que o usuário desejar.<br />
-Para fazer é necessário somente: procurar um pokemon de sua escolha dentre os que ja aparecerem na página inicial, ou procurar seu nome ou número da pokedéx na barra de pesquisa.<br />
+Nesta aplicação é possível ver e procurar todos os pokemons que você desejar.<br />
+Para fazer isso é necessário somente: procurar um pokemon de sua escolha dentre os que ja aparecerem na página inicial, ou procurar seu nome ou número da pokedéx na barra de pesquisa.<br />
 Ao apertar no botão de ver mais, o usuário é redirecionado para uma página onde é possível ver mais informações sobre o pokemon. 
 
 ### Instalando o projeto:
