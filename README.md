@@ -19,7 +19,7 @@ Ao apertar no botão de ver mais, o usuário é redirecionado para uma página o
 
 Digite em seu terminal, em um diretório a sua escolha `git clone https://github.com/henrique2003/PokeApi.git`<br/>
 
-### Rode a app com `yarn start` ou `npm run start`
+### Rode o app com `yarn start` ou `npm run start`
 
 1.Entre no diretorio do projto e rode o comando para inicializa-lo.<br />
 2.Rode a aplicação no modo de desenvolvimento.<br />
